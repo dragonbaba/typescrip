@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function clamp(number, lower, upper) {
+let clamp;
+clamp = function (number, lower, upper) {
     number = +number;
     lower = +lower;
     upper = +upper;
@@ -11,7 +12,7 @@ function clamp(number, lower, upper) {
         number = number >= lower ? number : lower;
     }
     return number;
-}
+};
 if (typeof Array.prototype.including === 'undefined') {
     Array.prototype.including = function (...value) {
         let that = this;

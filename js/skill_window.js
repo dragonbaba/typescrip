@@ -1,7 +1,9 @@
 "use strict";
 import {Window_Base} from './js/rmmz_windows.js';
-//
+import {Window_Selectable} from './js/rmmz_windows.js';
 //创建一个窗口
+let fin=new finalizationRegistry((value)=>console.log(value));
+fin.register(skillWindow,'skillWindow');
 class skillWindow extends Window_Selectable {
     constructor() {
         super(0, 0, 240, Graphics.boxHeight);
